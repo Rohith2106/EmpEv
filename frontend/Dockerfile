@@ -7,7 +7,7 @@ RUN npm install
 
 COPY . .
 
-ENV VITE_BASE_URL=http://localhost:5000/api/employees
+ENV VITE_BASE_URL=http://backend:5000/api/employees
 
 RUN npm run build
 

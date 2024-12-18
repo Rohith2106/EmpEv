@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: backend
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_URL=mysql://root:RcUxnwVpwUTMdamTzYFmMHBjNEsqBjJK@junction.proxy.rlwy.net:22079/railway
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    ports:
+      - "3000:80"
+    environment:
+      - VITE_BASE_URL=http://backend:5000/api/employees
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

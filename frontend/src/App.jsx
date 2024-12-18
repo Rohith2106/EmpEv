@@ -7,17 +7,17 @@ import './index.css';
 const App = () => {
     return (
         <Router>
-            <div className="bg-white min-h-screen flex flex-col items-center justify-start">
+            <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-start">
                 <nav className="mt-10 flex space-x-4">
                     <Link
                         to="/add-employee"
-                        className="px-6 py-3 text-white font-semibold bg-primary hover:bg-primary-dark rounded-md shadow-md transition-transform transform hover:scale-105"
+                        className="px-6 py-3 font-semibold bg-blue-600 hover:bg-blue-700 rounded-md shadow-md transition-transform transform hover:scale-105"
                     >
                         Add Employees
                     </Link>
                     <Link
                         to="/view-employees"
-                        className="px-6 py-3 text-white font-semibold bg-primary hover:bg-primary-dark rounded-md shadow-md transition-transform transform hover:scale-105"
+                        className="px-6 py-3 font-semibold bg-blue-600 hover:bg-blue-700 rounded-md shadow-md transition-transform transform hover:scale-105"
                     >
                         View Employees
                     </Link>
@@ -32,6 +32,5 @@ const App = () => {
         </Router>
     );
 };
-
 
 export default App;
